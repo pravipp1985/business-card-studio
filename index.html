@@ -1,215 +1,130 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Business Card Studio</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Business Card Studio Pro — Fonts & Templates Plus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Great+Vibes&family=Inter:wght@400;500;600;700;800&family=Lato:wght@400;700;900&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700;800&family=Roboto+Slab:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#172033;--accent:#176b87;--paper:#fff;--bg:#f2f5f8;--line:#d6dee7}
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
-header{background:#12263a;color:white;padding:16px}
-header h1{font-size:20px;margin:0 0 5px}
-header p{margin:0;font-size:13px;color:#dce8f1}
-main{max-width:1100px;margin:auto;padding:14px;display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
-.panel{background:white;border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:0 2px 8px #12263a0a}
-h2{font-size:16px;margin:0 0 12px}
-.fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-label{font-size:12px;font-weight:700;display:block;margin-bottom:5px}
-input,textarea,select{font:inherit;width:100%;border:1px solid #bdc9d5;border-radius:8px;padding:10px;background:white;color:#172033}
-textarea{min-height:68px;resize:vertical}
-.full{grid-column:1/-1}
-.colors{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.color-field{display:flex;align-items:center;gap:8px}
-input[type=color]{width:48px;height:40px;padding:3px}
-.preview-wrap{background:#e8edf2;border-radius:12px;padding:14px;overflow:auto}
-.card{position:relative;aspect-ratio:90/54;width:100%;max-width:560px;margin:auto;background:#fff;overflow:hidden;box-shadow:0 5px 18px #12263a25;color:#172033}
-.card .stripe{position:absolute;inset:0 auto 0 0;width:7%;background:#176b87}
-.card .inner{position:absolute;inset:8% 6% 7% 12%;display:flex;flex-direction:column;justify-content:center;gap:3%}
-.brand{font-size:clamp(11px,3vw,22px);font-weight:800;line-height:1.08;overflow-wrap:anywhere}
-.person{font-size:clamp(9px,2.2vw,15px);font-weight:700;margin-top:2%}
-.role{font-size:clamp(7px,1.6vw,11px);color:#536273}
-.details{font-size:clamp(7px,1.6vw,11px);line-height:1.4;white-space:pre-line;overflow-wrap:anywhere;margin-top:3%}
-.bottom{position:absolute;bottom:0;left:12%;right:0;height:5%;background:#176b87}
-.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}
-button{border:0;border-radius:9px;padding:12px 14px;font-weight:700;font-size:14px;cursor:pointer}
-.primary{background:#176b87;color:white}
-.secondary{background:#e7edf3;color:#172033}
-.note{font-size:12px;color:#526171;line-height:1.5}
-.status{font-size:13px;margin-top:10px;min-height:18px}
-@media(min-width:850px){main{grid-template-columns:1fr 1fr;padding:22px}.panel{padding:18px}}
+:root{--bg:#10141c;--panel:#1a202b;--panel2:#242d3b;--line:#374253;--text:#edf2f8;--muted:#aab5c5;--accent:#79e2c4;--blue:#83adff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+header{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 16px;background:#151b25;border-bottom:1px solid var(--line)}.brand{font-size:19px;font-weight:850}.brand b{color:var(--accent)}.actions,.tabs,.buttonrow{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+button,.button{border:1px solid var(--line);background:var(--panel2);color:var(--text);padding:8px 10px;border-radius:8px;font-weight:650;cursor:pointer}button:hover{border-color:var(--accent)}button.primary{background:var(--accent);color:#10231d;border-color:var(--accent)}button.active{border-color:var(--accent);background:#254239}button:disabled{opacity:.4;cursor:not-allowed}
+.layout{display:grid;grid-template-columns:250px minmax(300px,1fr) 285px;gap:12px;padding:12px;max-width:1700px;margin:auto}.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;min-width:0}.panel h2{margin:0;padding:12px;border-bottom:1px solid var(--line);font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}.body{padding:12px;display:grid;gap:12px}.group{display:grid;gap:6px}.group label,.hint{font-size:12px;color:var(--muted)}input,select,textarea{width:100%;min-width:0;padding:8px;border:1px solid var(--line);border-radius:7px;background:#10151d;color:var(--text)}input[type=color]{height:35px;padding:2px}input[type=range]{padding:0}input[type=checkbox]{width:auto;accent-color:var(--accent)}.row{display:grid;grid-template-columns:1fr 1fr;gap:7px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:6px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}.toolgrid{display:grid;grid-template-columns:1fr 1fr;gap:6px}.toolgrid button{font-size:12px}.workspace{display:flex;flex-direction:column;gap:10px;min-width:0}.stage{min-height:420px;display:flex;align-items:center;justify-content:center;padding:22px;overflow:auto;border:1px solid var(--line);border-radius:12px;background:radial-gradient(circle,#293343,#151a23 70%)}.cardwrap{flex:none;filter:drop-shadow(0 15px 25px #0007)}.card{position:relative;width:500px;height:300px;overflow:hidden;transform-origin:top left;background:white}.el{position:absolute;white-space:pre-wrap;min-width:8px;min-height:8px;cursor:move;user-select:none;touch-action:none;outline:1px dashed transparent}.el.selected{outline:1px dashed #3b8cff;z-index:999!important}.el img{width:100%;height:100%;object-fit:contain;pointer-events:none}.resize{position:absolute;width:10px;height:10px;right:-5px;bottom:-5px;background:#2682ff;border:1px solid white;display:none}.selected .resize{display:block}.card svg.guides{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.status{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;color:var(--muted);font-size:12px}.layers{display:grid;gap:5px;max-height:220px;overflow:auto}.layer{display:flex;align-items:center;gap:7px;text-align:left;font-size:12px}.layer span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}.layer.active{border-color:var(--accent);background:#253a35}.hidden{display:none!important}.swatches{display:grid;grid-template-columns:repeat(6,1fr);gap:5px}.swatch{height:24px;padding:0;border-radius:5px}.tiny{font-size:11px;color:var(--muted)}
+@media(max-width:1100px){.layout{grid-template-columns:220px minmax(280px,1fr)}.right{grid-column:1/-1}.right .body{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){header{align-items:flex-start;flex-direction:column}.layout{display:flex;flex-direction:column;padding:8px}.workspace{order:0}.left{order:1}.right{order:2}.stage{justify-content:flex-start;min-height:320px;padding:12px}.right .body{grid-template-columns:1fr}}
+@media print{body{background:white}header,.panel,.tabs,.status{display:none!important}.layout{display:block;padding:0}.stage{display:block;padding:0;min-height:0;background:white;border:0;overflow:visible}.cardwrap{filter:none;margin:0 auto}.card{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
 </style>
 </head>
 <body>
-<header>
-  <h1>Business Card Studio</h1>
-  <p>Simple editor · 90 × 54 mm finished size · 3 mm bleed · PDF with crop marks</p>
-</header>
-<main>
-<section class="panel">
-  <h2>1. Card details</h2>
-  <div class="fields">
-    <div class="full"><label for="business">Business name</label><input id="business" value="YOUR BUSINESS NAME" maxlength="70"></div>
-    <div><label for="person">Person's name</label><input id="person" value="Your Name" maxlength="60"></div>
-    <div><label for="role">Job title</label><input id="role" value="Designer / Manager" maxlength="60"></div>
-    <div class="full"><label for="phone">Phone / WhatsApp</label><input id="phone" value="+91 98765 43210" maxlength="70"></div>
-    <div class="full"><label for="email">Email / website</label><input id="email" value="hello@example.com" maxlength="100"></div>
-    <div class="full"><label for="address">Address</label><textarea id="address" maxlength="180">Your street, City, Kerala</textarea></div>
-  </div>
-  <h2 style="margin-top:18px">2. Style</h2>
-  <div class="colors">
-    <div><label for="background">Background</label><div class="color-field"><input id="background" type="color" value="#ffffff"><span id="bgHex">#ffffff</span></div></div>
-    <div><label for="accent">Accent</label><div class="color-field"><input id="accent" type="color" value="#176b87"><span id="accentHex">#176b87</span></div></div>
-    <div><label for="textColor">Text</label><div class="color-field"><input id="textColor" type="color" value="#172033"><span id="textHex">#172033</span></div></div>
-    <div><label for="layout">Layout</label><select id="layout"><option value="stripe">Side stripe</option><option value="top">Top banner</option><option value="minimal">Minimal</option></select></div>
-  </div>
-  <div class="actions">
-    <button class="primary" id="export">Export print PDF</button>
-    <button class="secondary" id="save">Save settings on this phone</button>
-    <button class="secondary" id="reset">Reset sample</button>
-  </div>
-  <div class="status" id="status" role="status"></div>
-  <p class="note">PDF export loads jsPDF from a public CDN and needs an internet connection. Your saved settings stay in this browser on this device. Keep a backup of important designs.</p>
-</section>
-<section class="panel">
-  <h2>3. Live preview</h2>
-  <div class="preview-wrap">
-    <div class="card" id="card" aria-label="Business card preview">
-      <div class="stripe" id="stripe"></div>
-      <div class="inner" id="inner">
-        <div class="brand" id="pBusiness">YOUR BUSINESS NAME</div>
-        <div class="person" id="pPerson">Your Name</div>
-        <div class="role" id="pRole">Designer / Manager</div>
-        <div class="details" id="pDetails">+91 98765 43210</div>
-      </div>
-      <div class="bottom" id="bottom"></div>
-    </div>
-  </div>
-  <p class="note">Preview shows the trimmed card only. The exported PDF adds 3 mm bleed on each side and crop marks outside the bleed. Finished trim size remains 90 × 54 mm; artwork is extended into the bleed by continuing the background and accent shapes.</p>
-  <h2 style="margin-top:18px">Print dimensions</h2>
-  <div class="note">
-    Finished size: <b>90 × 54 mm</b><br>
-    Bleed: <b>3 mm per side</b><br>
-    Artwork size including bleed: <b>96 × 60 mm</b><br>
-    PDF page includes extra room for crop marks.
-  </div>
-</section>
-</main>
+<header><div class="brand">Business Card <b>Studio Pro</b></div><div class="actions">
+<button id="undo">↶ Undo</button><button id="redo">↷ Redo</button><button id="save">Save project</button><button id="load">Load project</button><button id="png">Export PNG</button><button id="pdf" class="primary">Print / PDF</button>
+</div></header>
+<div class="layout">
+<aside class="panel left"><h2>Insert & design</h2><div class="body">
+<div class="group"><label>Starter layouts</label><select id="template"><option value="">Choose a starter design…</option><option value="modern">Modern minimal</option><option value="dark">Midnight premium</option><option value="creative">Creative studio</option><option value="elegant">Elegant serif</option><option value="corporate">Corporate blue</option><option value="luxury">Luxury black & gold</option><option value="tech">Technology / startup</option><option value="wellness">Wellness / organic</option><option value="food">Cafe / food brand</option><option value="photography">Photography</option><option value="realestate">Real estate</option><option value="medical">Medical / healthcare</option><option value="fashion">Fashion editorial</option><option value="freelancer">Freelancer / creator</option><option value="bold">Bold color block</option><option value="classic">Classic professional</option><option value="eco">Eco / sustainable</option></select><button id="applyTemplate">Apply template to this side</button></div>
+<div class="group"><label>Add element</label><div class="toolgrid"><button id="addText">＋ Text</button><button id="addTitle">＋ Title</button><button id="addRect">▰ Rectangle</button><button id="addCircle">● Circle</button><button id="addLine">／ Line</button><button id="addImage">＋ Logo / photo</button><button id="addQR">▦ QR code</button><button id="addBadge">✦ Badge</button></div><input id="imageFile" class="hidden" type="file" accept="image/*"></div>
+<div class="group"><label>Card background</label><input id="bg" type="color" value="#ffffff"><label class="tiny">Or choose a gradient</label><div class="row"><input id="gradA" type="color" value="#ffffff"><input id="gradB" type="color" value="#dce9f5"></div><button id="gradient">Apply gradient</button></div>
+<div class="group"><label>Card size</label><select id="preset"><option value="90,54">90 × 54 mm — standard</option><option value="89,51">89 × 51 mm</option><option value="85,55">85 × 55 mm</option><option value="custom">Custom size</option></select><div id="customSize" class="row hidden"><div><label>Width mm</label><input id="mmW" type="number" min="30" max="250" value="90"></div><div><label>Height mm</label><input id="mmH" type="number" min="20" max="150" value="54"></div></div></div>
+<div class="group"><label>Canvas helpers</label><div class="toolgrid"><button id="guides">Bleed / safe guides</button><button id="snapToggle" class="active">Snap to grid: ON</button><button id="centerH">Center horizontally</button><button id="centerV">Center vertically</button></div></div>
+<div class="group"><label>Palette</label><div class="swatches"><button class="swatch" data-color="#ffffff" style="background:#fff"></button><button class="swatch" data-color="#142238" style="background:#142238"></button><button class="swatch" data-color="#79e2c4" style="background:#79e2c4"></button><button class="swatch" data-color="#f2dfbd" style="background:#f2dfbd"></button><button class="swatch" data-color="#7e5bef" style="background:#7e5bef"></button><button class="swatch" data-color="#e76f51" style="background:#e76f51"></button></div></div>
+<p class="hint">Drag items to move. Use the blue corner handle to resize. Use arrow keys for small movements.</p>
+</div></aside>
+<main class="workspace"><div class="tabs"><button id="front" class="active">Front side</button><button id="back">Back side</button><span class="hint">Front and back are independent.</span></div><div class="stage" id="stage"><div class="cardwrap" id="wrap"><div class="card" id="card"></div></div></div><div class="status"><span id="dimensions">90 × 54 mm</span><span id="selection">Nothing selected</span><span id="zoom">Fit view</span></div></main>
+<aside class="panel right"><h2>Properties & layers</h2><div class="body">
+<div class="group"><label>Element properties</label><div id="none" class="hint">Select an item on the card or in the layer list.</div><div id="props" class="hidden">
+<div class="group" id="contentWrap"><label>Text / QR URL</label><textarea id="content" rows="3"></textarea></div>
+<div class="row" id="fontWrap"><div class="group"><label>Font family</label><select id="font"><option>Arial</option><option>Georgia</option><option>Verdana</option><option>Tahoma</option><option>Trebuchet MS</option><option>Times New Roman</option><option>Courier New</option><option>Inter</option><option>Montserrat</option><option>Poppins</option><option>DM Sans</option><option>Lato</option><option>Raleway</option><option>Oswald</option><option>Playfair Display</option><option>Libre Baskerville</option><option>Roboto Slab</option><option>Space Grotesk</option><option>Great Vibes</option></select></div><div class="group"><label>Size px</label><input id="size" type="number" min="5" max="160"></div></div>
+<div class="row" id="textStyle"><div class="group"><label>Weight</label><select id="weight"><option value="400">Regular</option><option value="600">Semi-bold</option><option value="700">Bold</option><option value="800">Extra bold</option></select></div><div class="group"><label>Alignment</label><select id="align"><option value="left">Left</option><option value="center">Center</option><option value="right">Right</option></select></div></div>
+<div class="row"><div class="group"><label>Text / fill</label><input id="color" type="color"></div><div class="group"><label>Opacity</label><input id="opacity" type="range" min="10" max="100"></div></div>
+<div class="row"><div class="group"><label>Width px</label><input id="w" type="number" min="8"></div><div class="group"><label>Height px</label><input id="h" type="number" min="8"></div></div>
+<div class="row"><div class="group"><label>X position</label><input id="x" type="number" min="0"></div><div class="group"><label>Y position</label><input id="y" type="number" min="0"></div></div>
+<div class="row"><div class="group"><label>Border color</label><input id="border" type="color"></div><div class="group"><label>Border width</label><input id="bw" type="number" min="0" max="25"></div></div>
+<div class="row"><button id="forward">Bring forward</button><button id="backward">Send backward</button></div><button id="delete">Delete item</button></div></div>
+<div class="group"><label>Layers — top first</label><div id="layers" class="layers"></div><div class="row"><button id="duplicate">Duplicate</button><button id="clear">Clear side</button></div></div>
+<div class="group"><label>Quick actions</label><div class="toolgrid"><button id="alignLeft">Align left</button><button id="alignTop">Align top</button><button id="fit">Fit canvas</button><button id="resetZoom">Reset view</button></div></div>
+</div></aside>
+</div><input id="projectFile" class="hidden" type="file" accept=".json,application/json">
 <script>
-const $ = id => document.getElementById(id);
-const ids = ['business','person','role','phone','email','address','background','accent','textColor','layout'];
-function val(id){return $(id).value}
-function update(){
-  $('pBusiness').textContent=val('business')||' ';
-  $('pPerson').textContent=val('person')||' ';
-  $('pRole').textContent=val('role')||' ';
-  $('pDetails').textContent=[val('phone'),val('email'),val('address')].filter(Boolean).join('\\n');
-  $('card').style.background=val('background');
-  $('card').style.color=val('textColor');
-  $('stripe').style.background=val('accent');
-  $('bottom').style.background=val('accent');
-  $('bgHex').textContent=val('background');
-  $('accentHex').textContent=val('accent');
-  $('textHex').textContent=val('textColor');
-  const layout=val('layout');
-  $('stripe').style.display=layout==='stripe'?'block':'none';
-  $('bottom').style.display=layout==='minimal'?'none':'block';
-  $('inner').style.left=layout==='stripe'?'12%':'6%';
-  $('inner').style.top=layout==='top'?'18%':'8%';
-  $('inner').style.bottom=layout==='top'?'7%':'7%';
-  if(layout==='top'){
-    $('stripe').style.inset='0 0 auto 0';$('stripe').style.width='100%';$('stripe').style.height='12%';
-  }else{
-    $('stripe').style.inset='0 auto 0 0';$('stripe').style.width='7%';$('stripe').style.height='100%';
-  }
+(()=>{const $=id=>document.getElementById(id),card=$('card'),wrap=$('wrap'),stage=$('stage');let S={width:90,height:54,bg:'#ffffff',gradient:null,guides:true,snap:true,side:'front',sides:{front:[],back:[]}},selected=null,counter=0,undoStack=[],redoStack=[],scale=1;
+const clone=o=>JSON.parse(JSON.stringify(o)),items=()=>S.sides[S.side],newId=()=>`e${++counter}`;
+function snapshot(){undoStack.push(JSON.stringify(S));if(undoStack.length>100)undoStack.shift();redoStack=[];historyButtons()}
+function historyButtons(){$('undo').disabled=!undoStack.length;$('redo').disabled=!redoStack.length}
+function element(type,p={}){return{id:newId(),type,x:35,y:35,w:type==='text'?230:90,h:type==='text'?38:70,text:type==='text'?'Your text':type==='qr'?'https://example.com':'',color:'#18202b',fill:'#79e2c4',font:'Arial',size:20,weight:'400',align:'left',opacity:100,border:'#18202b',bw:0,src:'',...p}}
+function add(type,p){snapshot();const e=element(type,p);items().push(e);selected=e.id;render()}
+function current(){return items().find(e=>e.id===selected)}
+function fit(){const maxW=Math.max(190,stage.clientWidth-42),maxH=Math.max(170,stage.clientHeight-42);scale=Math.min(maxW/card.offsetWidth,maxH/card.offsetHeight,1.4);wrap.style.width=card.offsetWidth*scale+'px';wrap.style.height=card.offsetHeight*scale+'px';card.style.transform=`scale(${scale})`}
+function render(){card.innerHTML='';card.style.width=(S.width/90*500)+'px';card.style.height=(S.height/54*300)+'px';card.style.background=S.gradient?`linear-gradient(135deg, ${S.gradient[0]}, ${S.gradient[1]})`:S.bg;const cw=card.offsetWidth,ch=card.offsetHeight;
+if(S.guides){const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('class','guides');svg.setAttribute('viewBox',`0 0 ${cw} ${ch}`);svg.innerHTML=`<rect x="7" y="7" width="${cw-14}" height="${ch-14}" fill="none" stroke="#ed5959" stroke-dasharray="5 4"/><rect x="${cw*.06}" y="${ch*.08}" width="${cw*.88}" height="${ch*.84}" fill="none" stroke="#219b78" stroke-dasharray="4 4"/>`;card.append(svg)}
+items().forEach((e,i)=>{const d=document.createElement('div');d.className='el'+(e.id===selected?' selected':'');d.dataset.id=e.id;Object.assign(d.style,{left:e.x+'px',top:e.y+'px',width:e.w+'px',height:e.h+'px',opacity:e.opacity/100,zIndex:i+1});
+if(e.type==='text'){d.textContent=e.text;Object.assign(d.style,{color:e.color,fontFamily:e.font,fontSize:e.size+'px',fontWeight:e.weight,textAlign:e.align,lineHeight:'1.2',padding:'2px'})}
+else if(['rect','circle','badge'].includes(e.type)){d.style.background=e.fill;d.style.border=e.bw+'px solid '+e.border;if(e.type==='circle')d.style.borderRadius='50%';if(e.type==='badge'){d.style.borderRadius='50%';d.style.display='flex';d.style.alignItems='center';d.style.justifyContent='center';d.style.color=e.color;d.style.fontSize=e.size+'px';d.textContent=e.text||'✦'}}
+else if(e.type==='line'){d.style.height=Math.max(2,e.bw||3)+'px';d.style.background=e.fill}
+else if(e.type==='image'||e.type==='qr'){if(e.type==='qr'){d.style.background='#fff';d.style.padding='3px'}const im=document.createElement('img');im.src=e.type==='qr'?'https://api.qrserver.com/v1/create-qr-code/?size=220x220&data='+encodeURIComponent(e.text||'https://example.com'):e.src;d.append(im)}
+const h=document.createElement('span');h.className='resize';d.append(h);d.addEventListener('pointerdown',dragStart);d.addEventListener('click',ev=>{ev.stopPropagation();if(selected!==e.id){selected=e.id;render()}});card.append(d)});
+card.onclick=()=>{selected=null;render()};$('front').classList.toggle('active',S.side==='front');$('back').classList.toggle('active',S.side==='back');$('bg').value=S.bg;$('dimensions').textContent=`${S.width} × ${S.height} mm`;$('selection').textContent=current()?`Selected: ${current().type}`:'Nothing selected';$('snapToggle').textContent='Snap to grid: '+(S.snap?'ON':'OFF');$('snapToggle').classList.toggle('active',S.snap);renderLayers();syncProps();fit();historyButtons()}
+function renderLayers(){const box=$('layers');box.innerHTML='';[...items()].reverse().forEach(e=>{const b=document.createElement('button');b.className='layer'+(e.id===selected?' active':'');const icon=document.createElement('span');icon.textContent='◈';const name=document.createElement('span');name.textContent=e.type==='text'?e.text.slice(0,30):e.type==='image'?'Image / logo':e.type==='qr'?'QR code':e.type;b.append(icon,name);b.onclick=()=>{selected=e.id;render()};box.append(b)});if(!items().length)box.innerHTML='<span class="hint">No elements on this side.</span>'}
+function syncProps(){const e=current();$('none').classList.toggle('hidden',!!e);$('props').classList.toggle('hidden',!e);if(!e)return;const vals={content:e.text||'',font:e.font,size:e.size,color:e.type==='text'?e.color:(e.fill||e.color),opacity:e.opacity,weight:e.weight,align:e.align,w:e.w,h:e.h,x:e.x,y:e.y,border:e.border,bw:e.bw};Object.entries(vals).forEach(([k,v])=>{if(document.activeElement!==$(k))$(k).value=v});$('contentWrap').classList.toggle('hidden',!['text','qr','badge'].includes(e.type));$('fontWrap').classList.toggle('hidden',e.type!=='text');$('textStyle').classList.toggle('hidden',e.type!=='text')}
+function edit(k,v){const e=current();if(!e)return;snapshot();if(k==='content')e.text=v;else if(k==='font')e.font=v;else if(k==='size')e.size=+v||20;else if(k==='color'){if(e.type==='text'||e.type==='badge')e.color=v;else e.fill=v}else if(k==='opacity')e.opacity=+v;else if(k==='weight')e.weight=v;else if(k==='align')e.align=v;else if(['w','h','x','y','bw'].includes(k))e[k]=Math.max(['x','y','bw'].includes(k)?0:8,+v||0);else if(k==='border')e.border=v;render()}
+['content','font','size','color','opacity','weight','align','w','h','x','y','border','bw'].forEach(k=>$(k).addEventListener('change',()=>edit(k,$(k).value)));
+function dragStart(ev){if(ev.button!==0)return;ev.stopPropagation();let e=items().find(q=>q.id===ev.currentTarget.dataset.id);if(!e)return;if(selected!==e.id){selected=e.id;render()}const st={id:e.id,cx:ev.clientX,cy:ev.clientY,x:e.x,y:e.y,w:e.w,h:e.h,resize:ev.target.classList.contains('resize'),saved:false};function move(m){const q=items().find(a=>a.id===st.id);if(!q)return;let dx=(m.clientX-st.cx)/scale,dy=(m.clientY-st.cy)/scale;if(!st.saved&&Math.abs(dx)+Math.abs(dy)>2){snapshot();st.saved=true}if(st.resize){q.w=Math.max(8,Math.round(st.w+dx));q.h=Math.max(8,Math.round(st.h+dy))}else{q.x=Math.max(0,Math.round(st.x+dx));q.y=Math.max(0,Math.round(st.y+dy));if(S.snap){q.x=Math.round(q.x/5)*5;q.y=Math.round(q.y/5)*5}}render()}function end(){window.removeEventListener('pointermove',move);window.removeEventListener('pointerup',end)}window.addEventListener('pointermove',move);window.addEventListener('pointerup',end,{once:true})}
+function switchSide(s){S.side=s;selected=null;render()}
+$('front').onclick=()=>switchSide('front');$('back').onclick=()=>switchSide('back');
+$('addText').onclick=()=>add('text',{text:'Your text',x:40,y:40});$('addTitle').onclick=()=>add('text',{text:'YOUR NAME',x:35,y:35,w:300,h:48,size:30,weight:'800'});$('addRect').onclick=()=>add('rect',{x:30,y:30,w:140,h:70,fill:'#142238'});$('addCircle').onclick=()=>add('circle',{x:40,y:40,w:80,h:80,fill:'#79e2c4'});$('addLine').onclick=()=>add('line',{x:30,y:30,w:180,h:3,fill:'#18202b',bw:3});$('addQR').onclick=()=>add('qr',{x:365,y:180,w:75,h:75,text:'https://example.com'});$('addBadge').onclick=()=>add('badge',{x:370,y:35,w:75,h:75,text:'✦',fill:'#142238',color:'#ffffff',size:32});
+$('addImage').onclick=()=>$('imageFile').click();$('imageFile').onchange=ev=>{const f=ev.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>add('image',{src:r.result,x:45,y:45,w:120,h:90});r.readAsDataURL(f);ev.target.value=''};
+$('bg').onchange=ev=>{snapshot();S.bg=ev.target.value;S.gradient=null;render()};$('gradient').onclick=()=>{snapshot();S.gradient=[$('gradA').value,$('gradB').value];render()};document.querySelectorAll('[data-color]').forEach(b=>b.onclick=()=>{snapshot();S.bg=b.dataset.color;S.gradient=null;render()});
+$('preset').onchange=()=>{let v=$('preset').value;$('customSize').classList.toggle('hidden',v!=='custom');if(v!=='custom'){snapshot();[S.width,S.height]=v.split(',').map(Number);render()}};['mmW','mmH'].forEach(k=>$(k).onchange=()=>{snapshot();S.width=Math.max(30,Math.min(250,+$('mmW').value||90));S.height=Math.max(20,Math.min(150,+$('mmH').value||54));render()});
+$('guides').onclick=()=>{snapshot();S.guides=!S.guides;render()};$('snapToggle').onclick=()=>{snapshot();S.snap=!S.snap;render()};
+$('centerH').onclick=()=>{const e=current();if(!e)return;snapshot();e.x=Math.round((card.offsetWidth-e.w)/2);render()};$('centerV').onclick=()=>{const e=current();if(!e)return;snapshot();e.y=Math.round((card.offsetHeight-e.h)/2);render()};$('alignLeft').onclick=()=>{const e=current();if(!e)return;snapshot();e.x=0;render()};$('alignTop').onclick=()=>{const e=current();if(!e)return;snapshot();e.y=0;render()};
+$('forward').onclick=()=>{const e=current();if(!e)return;snapshot();let a=items(),i=a.findIndex(q=>q.id===e.id);if(i>=0){a.splice(i,1);a.push(e)}render()};$('backward').onclick=()=>{const e=current();if(!e)return;snapshot();let a=items(),i=a.findIndex(q=>q.id===e.id);if(i>=0){a.splice(i,1);a.unshift(e)}render()};
+$('delete').onclick=()=>{if(!current())return;snapshot();S.sides[S.side]=items().filter(e=>e.id!==selected);selected=null;render()};$('duplicate').onclick=()=>{const e=current();if(!e)return;snapshot();const c=clone(e);c.id=newId();c.x+=15;c.y+=15;items().push(c);selected=c.id;render()};$('clear').onclick=()=>{if(items().length&&confirm('Clear all elements on this side?')){snapshot();S.sides[S.side]=[];selected=null;render()}};
+$('undo').onclick=()=>{if(!undoStack.length)return;redoStack.push(JSON.stringify(S));S=JSON.parse(undoStack.pop());selected=null;render()};$('redo').onclick=()=>{if(!redoStack.length)return;undoStack.push(JSON.stringify(S));S=JSON.parse(redoStack.pop());selected=null;render()};
+$('save').onclick=()=>{const b=new Blob([JSON.stringify({app:'Business Card Studio Pro',version:3,state:S},null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='business-card-studio-pro-project.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
+$('load').onclick=()=>$('projectFile').click();$('projectFile').onchange=ev=>{const f=ev.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const p=JSON.parse(r.result),q=p.state||p;if(!q.sides||!q.width||!q.height)throw 0;snapshot();S=q;selected=null;render()}catch(_){alert('This project file could not be loaded.')}};r.readAsText(f);ev.target.value=''};
+$('pdf').onclick=()=>{const g=S.guides;S.guides=false;render();setTimeout(()=>{window.print();S.guides=g;render()},250)};
+$('png').onclick=()=>{alert('PNG export uses the browser canvas renderer. For best print quality, use Print / Save PDF. If PNG export is needed, use a browser screenshot of the card canvas.')};
+$('fit').onclick=fit;$('resetZoom').onclick=fit;window.addEventListener('resize',fit);
+document.addEventListener('keydown',ev=>{if((ev.key==='Delete'||ev.key==='Backspace')&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)&&current())$('delete').click();if((ev.ctrlKey||ev.metaKey)&&ev.key.toLowerCase()==='z'){ev.preventDefault();$('undo').click()}if((ev.ctrlKey||ev.metaKey)&&ev.key.toLowerCase()==='y'){ev.preventDefault();$('redo').click()}if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(ev.key)&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)&&current()){ev.preventDefault();snapshot();const e=current(),d=ev.shiftKey?10:1;if(ev.key==='ArrowLeft')e.x=Math.max(0,e.x-d);if(ev.key==='ArrowRight')e.x+=d;if(ev.key==='ArrowUp')e.y=Math.max(0,e.y-d);if(ev.key==='ArrowDown')e.y+=d;render()}});
+$('applyTemplate').onclick=()=>{const v=$('template').value;if(!v)return;snapshot();S.gradient=null;const dark=v==='dark';S.bg=dark?'#101b2b':v==='elegant'?'#f8f2e8':v==='creative'?'#f4f7ff':'#ffffff';const ink=dark?'#ffffff':v==='creative'?'#27235c':'#172b3d',accent=v==='creative'?'#7e5bef':v==='elegant'?'#b58a4c':'#79e2c4';S.sides[S.side]=[];const push=(type,p)=>S.sides[S.side].push(element(type,p));
+if(v==='modern'){push('text',{x:35,y:38,w:300,h:42,text:'ALEX MORGAN',size:28,weight:'800',color:ink});push('text',{x:38,y:84,w:280,h:25,text:'DESIGNER  •  CREATOR',size:13,weight:'700',color:accent});push('line',{x:38,y:125,w:80,h:4,fill:accent,bw:4});push('text',{x:38,y:155,w:280,h:70,text:'hello@example.com\\n+91 98765 43210\\nwww.example.com',size:13,color:ink})}
+if(v==='dark'){push('rect',{x:0,y:0,w:500,h:300,fill:'#14263b'});push('circle',{x:365,y:-40,w:190,h:190,fill:accent});push('text',{x:35,y:45,w:340,h:42,text:'YOUR NAME',size:30,weight:'800',color:'#ffffff'});push('text',{x:38,y:92,w:310,h:24,text:'FOUNDER  /  CONSULTANT',size:13,weight:'700',color:accent});push('text',{x:38,y:180,w:300,h:70,text:'contact@example.com\\n+91 98765 43210',size:14,color:'#ffffff'})}
+if(v==='creative'){push('circle',{x:365,y:-30,w:170,h:170,fill:accent});push('rect',{x:0,y:220,w:500,h:80,fill:'#27235c'});push('text',{x:30,y:45,w:330,h:45,text:'STUDIO NORTH',size:30,weight:'800',color:ink});push('text',{x:32,y:95,w:330,h:25,text:'BRAND • DIGITAL • DESIGN',size:14,weight:'700',color:accent});push('text',{x:32,y:165,w:340,h:30,text:'hello@studionorth.com',size:14,color:ink});push('text',{x:30,y:240,w:430,h:30,text:'MAKE SOMETHING MEMORABLE',size:16,weight:'800',color:'#ffffff'})}
+if(v==='elegant'){push('line',{x:35,y:30,w:430,h:2,fill:accent,bw:2});push('text',{x:35,y:60,w:430,h:45,text:'Olivia Bennett',size:30,font:'Playfair Display',color:ink,align:'center'});push('text',{x:35,y:110,w:430,h:25,text:'INTERIOR DESIGN',size:13,weight:'600',color:accent,align:'center'});push('line',{x:190,y:150,w:120,h:2,fill:accent,bw:2});push('text',{x:35,y:175,w:430,h:70,text:'studio@example.com  •  +91 98765 43210\\nwww.example.com',size:13,font:'Libre Baskerville',color:ink,align:'center'})}
+if(['corporate','luxury','tech','wellness','food','photography','realestate','medical','fashion','freelancer','bold','classic','eco'].includes(v)){
+ const configs={
+ corporate:{bg:'#f3f7fb',ink:'#15385b',a:'#2d7fc1',font:'Inter',name:'JORDAN WILLIAMS',role:'BUSINESS CONSULTANT',details:'jordan@example.com\\n+91 98765 43210\\nwww.example.com'},
+ luxury:{bg:'#111111',ink:'#f7f0df',a:'#c7a45a',font:'Playfair Display',name:'ALEXANDRA REED',role:'CREATIVE DIRECTOR',details:'studio@example.com\\n+91 98765 43210'},
+ tech:{bg:'#10182b',ink:'#f5f8ff',a:'#6ee7f9',font:'Space Grotesk',name:'NEXUS LABS',role:'BUILDING WHAT’S NEXT',details:'hello@nexus.example\\nwww.nexus.example'},
+ wellness:{bg:'#f1f2e8',ink:'#334b3e',a:'#93a987',font:'DM Sans',name:'MAYA WELLNESS',role:'WELLNESS • BALANCE • CARE',details:'hello@example.com\\n+91 98765 43210'},
+ food:{bg:'#fff5e8',ink:'#4c2920',a:'#d96b3b',font:'Lato',name:'THE DAILY TABLE',role:'COFFEE • BAKES • GOOD FOOD',details:'hello@dailytable.example\\nwww.dailytable.example'},
+ photography:{bg:'#171717',ink:'#ffffff',a:'#e7b85c',font:'Montserrat',name:'SAM TAYLOR',role:'PHOTOGRAPHY',details:'photo@example.com\\n@sam.taylor'},
+ realestate:{bg:'#f4f5f6',ink:'#1d3542',a:'#b78b52',font:'Montserrat',name:'EMILY CARTER',role:'PROPERTY ADVISOR',details:'emily@example.com\\n+91 98765 43210'},
+ medical:{bg:'#f3fbfc',ink:'#17495b',a:'#35a9a2',font:'Inter',name:'DR. ARUN KUMAR',role:'GENERAL PHYSICIAN',details:'clinic@example.com\\n+91 98765 43210'},
+ fashion:{bg:'#faf5f0',ink:'#251f20',a:'#bd8b8b',font:'Playfair Display',name:'ATELIER NOIR',role:'STYLE • FORM • DETAIL',details:'studio@example.com\\n@ateliernoir'},
+ freelancer:{bg:'#f4f0ff',ink:'#30225c',a:'#8d72e8',font:'Poppins',name:'YOUR NAME',role:'INDEPENDENT CREATIVE',details:'hello@example.com\\nwww.example.com'},
+ bold:{bg:'#f5e84a',ink:'#171717',a:'#ee583e',font:'Oswald',name:'MAKE IT HAPPEN',role:'IDEAS INTO ACTION',details:'hello@example.com\\n+91 98765 43210'},
+ classic:{bg:'#ffffff',ink:'#26384a',a:'#6b849b',font:'Libre Baskerville',name:'THOMAS & CO.',role:'PROFESSIONAL SERVICES',details:'contact@example.com\\n+91 98765 43210\\nwww.example.com'},
+ eco:{bg:'#f2f4e9',ink:'#2d4935',a:'#78966b',font:'DM Sans',name:'ROOT & RIVER',role:'THOUGHTFULLY SUSTAINABLE',details:'hello@example.com\\nwww.example.com'}
+ };
+ const c=configs[v];S.bg=c.bg;S.gradient=null;const wide=v==='bold'||v==='tech';
+ if(v==='luxury'){push('rect',{x:0,y:0,w:10,h:300,fill:c.a});push('circle',{x:385,y:25,w:75,h:75,fill:c.a});}
+ else if(v==='tech'){push('circle',{x:375,y:-45,w:190,h:190,fill:'#263b62'});push('line',{x:35,y:135,w:120,h:3,fill:c.a,bw:3});}
+ else if(v==='wellness'||v==='eco'){push('circle',{x:390,y:-25,w:125,h:125,fill:c.a});push('circle',{x:410,y:10,w:65,h:65,fill:c.bg});}
+ else if(v==='food'){push('circle',{x:390,y:20,w:75,h:75,fill:c.a});push('circle',{x:408,y:38,w:39,h:39,fill:c.bg});}
+ else if(v==='photography'){push('rect',{x:0,y:0,w:500,h:9,fill:c.a});push('rect',{x:0,y:291,w:500,h:9,fill:c.a});}
+ else if(v==='fashion'||v==='luxury'){push('line',{x:35,y:26,w:430,h:2,fill:c.a,bw:2});}
+ else if(v==='medical'){push('circle',{x:405,y:22,w:55,h:55,fill:c.a});push('rect',{x:427,y:32,w:11,h:35,fill:'#ffffff'});push('rect',{x:415,y:44,w:35,h:11,fill:'#ffffff'});}
+ else if(v==='realestate'){push('rect',{x:0,y:0,w:500,h:11,fill:c.ink});push('line',{x:35,y:145,w:70,h:3,fill:c.a,bw:3});}
+ else if(v==='corporate'||v==='classic'){push('rect',{x:0,y:0,w:12,h:300,fill:c.a});}
+ else if(v==='bold'){push('rect',{x:0,y:225,w:500,h:75,fill:c.ink});}
+ else {push('rect',{x:0,y:0,w:500,h:8,fill:c.a});}
+ push('text',{x:wide?28:38,y:wide?50:45,w:wide?400:350,h:46,text:c.name,size:v==='bold'?31:27,weight:'800',font:c.font,color:c.ink});
+ push('text',{x:wide?30:40,y:wide?100:91,w:390,h:27,text:c.role,size:13,weight:'700',font:'Montserrat',color:c.a});
+ if(!['luxury','fashion'].includes(v))push('line',{x:wide?30:40,y:140,w:75,h:3,fill:c.a,bw:3});
+ push('text',{x:wide?30:40,y:165,w:360,h:80,text:c.details,size:13,font:v==='luxury'||v==='fashion'||v==='classic'?'Libre Baskerville':c.font,color:c.ink});
+ if(v==='bold')push('text',{x:30,y:245,w:440,h:32,text:'YOUR BRAND. YOUR NEXT CHAPTER.',size:14,weight:'800',color:'#f5e84a'});
 }
-ids.forEach(id=>$(id).addEventListener('input',update));
-function saveSettings(){
-  const data={};ids.forEach(id=>data[id]=val(id));
-  try{localStorage.setItem('businessCardStudioSettings',JSON.stringify(data));$('status').textContent='Settings saved in this browser on this phone.';}
-  catch(e){$('status').textContent='Could not save settings in this browser. Please allow site storage.';}
-}
-function loadSettings(){
-  try{
-    const raw=localStorage.getItem('businessCardStudioSettings');
-    if(raw){const data=JSON.parse(raw);ids.forEach(id=>{if(data[id]!==undefined)$(id).value=data[id];});}
-  }catch(e){}
-}
-$('save').addEventListener('click',saveSettings);
-$('reset').addEventListener('click',()=>{
-  const defaults={business:'YOUR BUSINESS NAME',person:'Your Name',role:'Designer / Manager',phone:'+91 98765 43210',email:'hello@example.com',address:'Your street, City, Kerala',background:'#ffffff',accent:'#176b87',textColor:'#172033',layout:'stripe'};
-  ids.forEach(id=>$(id).value=defaults[id]);update();$('status').textContent='Sample values restored.';
-});
-function loadJsPDF(){
-  return new Promise((resolve,reject)=>{
-    if(window.jspdf&&window.jspdf.jsPDF){resolve(window.jspdf.jsPDF);return;}
-    const s=document.createElement('script');
-    s.src='https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
-    s.onload=()=>window.jspdf&&window.jspdf.jsPDF?resolve(window.jspdf.jsPDF):reject(new Error('PDF library did not load'));
-    s.onerror=()=>reject(new Error('Could not load PDF library. Check your internet connection.'));
-    document.head.appendChild(s);
-  });
-}
-function hexRgb(hex){hex=hex.replace('#','');return [parseInt(hex.slice(0,2),16),parseInt(hex.slice(2,4),16),parseInt(hex.slice(4,6),16)];}
-function pdfText(doc,text,x,y,maxWidth,fontSize,style='normal'){
-  const lines=doc.splitTextToSize(String(text||''),maxWidth);
-  doc.setFont('helvetica',style);doc.setFontSize(fontSize);
-  doc.text(lines,x,y);
-  return y+lines.length*(fontSize*0.42);
-}
-$('export').addEventListener('click',async()=>{
-  $('status').textContent='Preparing PDF…';
-  $('export').disabled=true;
-  try{
-    const jsPDF=await loadJsPDF();
-    // PDF page is 112 × 76 mm, leaving room around the 96 × 60 mm bleed box for crop marks.
-    const doc=new jsPDF({orientation:'landscape',unit:'mm',format:[112,76],compress:true});
-    const trimX=11,trimY=11,trimW=90,trimH=54,bleed=3;
-    const bx=trimX-bleed,by=trimY-bleed,bw=trimW+2*bleed,bh=trimH+2*bleed;
-    const bg=hexRgb(val('background')),ac=hexRgb(val('accent')),tc=hexRgb(val('textColor'));
-    // Extend solid background into bleed.
-    doc.setFillColor(...bg);doc.rect(bx,by,bw,bh,'F');
-    // Continue accent shape through bleed.
-    const layout=val('layout');
-    if(layout==='stripe'){
-      doc.setFillColor(...ac);doc.rect(bx,by,6.7,bh,'F');
-    }else if(layout==='top'){
-      doc.setFillColor(...ac);doc.rect(bx,by,bw,7.2,'F');
-    }else{
-      doc.setFillColor(...ac);doc.rect(bx,by,bw,1.2,'F');
-    }
-    // Text remains inside trim with a 5 mm safety inset.
-    const left=trimX+(layout==='stripe'?11:5);
-    const right=trimX+trimW-5;
-    let y=trimY+14;
-    doc.setTextColor(...tc);
-    y=pdfText(doc,val('business'),left,y,right-left,15,'bold')+3;
-    y=pdfText(doc,val('person'),left,y,right-left,10,'bold')+1.5;
-    y=pdfText(doc,val('role'),left,y,right-left,7,'normal')+3;
-    y=pdfText(doc,val('phone'),left,y,right-left,7,'normal')+3;
-    y=pdfText(doc,val('email'),left,y,right-left,7,'normal')+3;
-    pdfText(doc,val('address'),left,y,right-left,7,'normal');
-    // Crop marks outside the bleed, 1.5 mm gap, 4 mm long.
-    const gap=1.5,len=4;
-    const xL=bx-gap-len,xR=bx+bw+gap,yT=by-gap-len,yB=by+bh+gap;
-    doc.setDrawColor(0,0,0);doc.setLineWidth(0.18);
-    // top-left and top-right
-    [[xL,trimY-bleed-gap,xL+len,trimY-bleed-gap],[trimX-bleed-gap, yT,trimX-bleed-gap,yT+len]].forEach(a=>doc.line(...a));
-    // use explicit crop marks aligned to trim edges, kept beyond bleed
-    doc.line(bx-gap-len,trimY,bx-gap,trimY);
-    doc.line(trimX,by-gap-len,trimX,by-gap);
-    doc.line(bx+bw+gap,trimY,bx+bw+gap+len,trimY);
-    doc.line(trimX+trimW,by-gap-len,trimX+trimW,by-gap);
-    doc.line(bx-gap-len,trimY+trimH,bx-gap,trimY+trimH);
-    doc.line(trimX,by+bh+gap,trimX,by+bh+gap+len);
-    doc.line(bx+bw+gap,trimY+trimH,bx+bw+gap+len,trimY+trimH);
-    doc.line(trimX+trimW,by+bh+gap,trimX+trimW,by+bh+gap+len);
-    doc.save('business-card-90x54mm-3mm-bleed.pdf');
-    $('status').textContent='PDF exported. Check the PDF at 100% scale and confirm all text fits before printing.';
-  }catch(e){$('status').textContent=e.message||'PDF export failed.';}
-  finally{$('export').disabled=false;}
-});
-loadSettings();update();
-</script>
-</body>
-</html>
+selected=null;render()};
+render();historyButtons()})();
+</script></body></html>
